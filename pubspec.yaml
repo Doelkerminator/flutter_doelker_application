@@ -20,6 +20,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   splashscreen: ^1.3.5
   splash_screen_view: ^3.0.0
+  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +47,9 @@ flutter:
   assets:
     - images/slime.png
     - images/gnomed.jpg
+    - images/manzana.png
+    - images/mango.png
+    - images/coco.png
 
 # Fonts
   fonts:
