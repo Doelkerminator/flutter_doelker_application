@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/routes/routes.dart';
-import 'package:flutter_application/screens/dashboard.dart';
+import 'package:flutter_application/screens/login.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() => runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         routes: getApplicationRoutes(),
         theme: ThemeData(fontFamily: 'Candara'),
         home: SplashScreenView(
-          navigateRoute: const Dashboard(),
+          navigateRoute: Login(),
           duration: 5000,
           imageSize: 150,
           imageSrc: "images/slime.png",

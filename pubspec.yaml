@@ -21,6 +21,7 @@ dependencies:
   splashscreen: ^1.3.5
   splash_screen_view: ^3.0.0
   carousel_slider: ^4.0.0
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +51,8 @@ flutter:
     - images/manzana.png
     - images/mango.png
     - images/coco.png
+    - images/facebook.jpg
+    - images/google.jpg
 
 # Fonts
   fonts:
