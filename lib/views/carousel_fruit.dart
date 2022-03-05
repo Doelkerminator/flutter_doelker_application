@@ -23,9 +23,7 @@ class _CarouselFruit extends State<CarouselFruit> {
       children: [
         CarouselSlider(
           items: imgList
-              .map((item) => Container(
-                    child: Center(child: Image.asset(item.toString())),
-                  ))
+              .map((item) => Center(child: Image.asset(item.toString())))
               .toList(),
           options: CarouselOptions(
               autoPlay: true,

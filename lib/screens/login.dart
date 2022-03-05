@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class Login extends StatefulWidget {
-  Login({Key? key}) : super(key: key);
+  const Login({Key? key}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();
@@ -10,6 +10,17 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   bool? _rememberMe = false;
+
+  Widget _buildSignInTxt() {
+    return const Text(
+      'Sign In',
+      style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Candara',
+          fontSize: 42.0,
+          fontWeight: FontWeight.bold),
+    );
+  }
 
   Widget _buildEmailTF() {
     return Column(
@@ -115,8 +126,7 @@ class _LoginState extends State<Login> {
   }
 
   Widget _buildRememberCB() {
-    return Container(
-        child: Row(
+    return Row(
       children: <Widget>[
         Theme(
             data: ThemeData(unselectedWidgetColor: Colors.white),
@@ -135,7 +145,7 @@ class _LoginState extends State<Login> {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         )
       ],
-    ));
+    );
   }
 
   Widget _buildLoginBtn() {
@@ -159,24 +169,19 @@ class _LoginState extends State<Login> {
     );
   }
 
-  Widget _buildSigninBtn() {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15.0),
-      width: 120.0,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(primary: Colors.black),
-        onPressed: () => Navigator.pushNamed(context, '/dashboard'),
-        child: const Text(
-          'SIGN IN',
-          style: TextStyle(
-            color: Colors.white,
-            letterSpacing: 1.5,
-            fontSize: 18.0,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'OpenSans',
-          ),
+  Widget _buildSignWTxt() {
+    return Column(
+      children: const <Widget>[
+        Text(
+          '- OR -',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
         ),
-      ),
+        SizedBox(height: 10.0),
+        Text(
+          'Sign in with',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        )
+      ],
     );
   }
 
@@ -237,19 +242,24 @@ class _LoginState extends State<Login> {
     );
   }
 
-  Widget _buildSignWTxt() {
-    return Column(
-      children: const <Widget>[
-        Text(
-          '- OR -',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
+  Widget _buildSigninBtn() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 15.0),
+      width: 120.0,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(primary: Colors.black),
+        onPressed: () => Navigator.pushNamed(context, '/dashboard'),
+        child: const Text(
+          'SIGN IN',
+          style: TextStyle(
+            color: Colors.white,
+            letterSpacing: 1.5,
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'OpenSans',
+          ),
         ),
-        SizedBox(height: 10.0),
-        Text(
-          'Sign in with',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        )
-      ],
+      ),
     );
   }
 
@@ -274,7 +284,7 @@ class _LoginState extends State<Login> {
               stops: [0.1, 0.4, 0.7, 0.95],
             )),
           ),
-          Container(
+          SizedBox(
             height: double.infinity,
             child: SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
@@ -283,14 +293,7 @@ class _LoginState extends State<Login> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const Text(
-                    'Sign In',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Candara',
-                        fontSize: 42.0,
-                        fontWeight: FontWeight.bold),
-                  ),
+                  _buildSignInTxt(),
                   const SizedBox(height: 10.0),
                   _buildEmailTF(),
                   const SizedBox(height: 10.0),

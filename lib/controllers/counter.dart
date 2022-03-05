@@ -48,14 +48,13 @@ class _CounterDesignState extends State<CounterDesign> {
           ),
         ),
         const SizedBox(width: 100),
-        Container(
-            child: Text(
+        Text(
           'Rs $_amt',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 30.0,
           ),
-        ))
+        )
       ],
     );
   }

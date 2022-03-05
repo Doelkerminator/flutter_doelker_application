@@ -21,11 +21,11 @@ class _FruitState extends State<Fruit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 215, 130, 255),
+        backgroundColor: const Color.fromARGB(255, 215, 130, 255),
         appBar: AppBar(
           title: const Text("Fruitery"),
           elevation: 0,
-          backgroundColor: Color.fromARGB(255, 248, 13, 217),
+          backgroundColor: const Color.fromARGB(255, 248, 13, 217),
           actions: <Widget>[
             IconButton(
                 onPressed: () {},

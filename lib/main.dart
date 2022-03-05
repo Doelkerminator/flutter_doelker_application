@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         routes: getApplicationRoutes(),
         theme: ThemeData(fontFamily: 'Candara'),
         home: SplashScreenView(
-          navigateRoute: Login(),
+          navigateRoute: const Login(),
           duration: 5000,
           imageSize: 150,
           imageSrc: "images/slime.png",
